@@ -15,9 +15,10 @@ after_success:
   - docker build -t mdejesus2/multi-worker ./worker
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+
   # Take those images and push them to docker hub
-  - docker push mdejesus2/multi-client
-  - docker push mdejesus2/multi-nginx
-  - docker push mdejesus2/multi-server
-  - docker push mdejesus2/multi-worker
+  - docker push michaeldejesus/multi-client
+  - docker push michaeldejesus/multi-nginx
+  - docker push michaeldejesus/multi-server
+  - docker push michaeldejesus/multi-worker
 
