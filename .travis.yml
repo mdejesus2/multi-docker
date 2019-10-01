@@ -3,16 +3,16 @@ services:
   - docker
 
 before_install:
-  - docker build -t mdejesus2/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t michaeldejesus/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run mdejesus2/react-test npm test -- --coverage
+  - docker run michaeldejesus/react-test npm test -- --coverage
 
 after_success:
-  - docker build -t mdejesus2/multi-client ./client
-  - docker build -t mdejesus2/multi-nginx ./nginx
-  - docker build -t mdejesus2/multi-server ./server
-  - docker build -t mdejesus2/multi-worker ./worker
+  - docker build -t michaeldejesus/multi-client ./client
+  - docker build -t michaeldejesus/multi-nginx ./nginx
+  - docker build -t michaeldejesus/multi-server ./server
+  - docker build -t michaeldejesus/multi-worker ./worker
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 

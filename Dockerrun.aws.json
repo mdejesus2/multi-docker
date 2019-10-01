@@ -3,28 +3,28 @@
   "containerDefinitions": [
     {
       "name": "client",
-      "image": "mdejesus2/multi-client",
+      "image": "michaeldejesus/multi-client",
       "hostname": "client",
       "essential": false,
       "memory": 128
     },
     {
       "name": "server",
-      "image": "mdejesus2/multi-server",
+      "image": "michaeldejesus/multi-server",
       "hostname": "api",
       "essential": false,
       "memory": 128
     },
     {
       "name": "worker",
-      "image": "mdejesus2/multi-worker",
+      "image": "michaeldejesus/multi-worker",
       "hostname": "worker",
       "essential": false,
       "memory": 128
     },
     {
       "name": "nginx",
-      "image": "mdejesus2/multi-nginx",
+      "image": "michaeldejesus/multi-nginx",
       "hostname": "nginx",
       "essential": true,
       "portMappings": [
